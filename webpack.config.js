@@ -6,7 +6,7 @@ const jQuery   = new webpack.ProvidePlugin({
     jQuery: 'jquery',
     $: 'jquery',
     jquery: 'jquery'
-});
+});   
 const paths    = {
     app: path.resolve(__dirname, 'src')
 };
