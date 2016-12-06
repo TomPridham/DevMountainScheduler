@@ -3,7 +3,7 @@ const path = require('path');
 
 const paths = {
     app: path.resolve(__dirname, 'src')
-}
+};
 
 module.exports = {
     entry: './src/app.jsx',
@@ -31,4 +31,4 @@ module.exports = {
             }
         ]
     }
-}
+};
