@@ -1,33 +1,40 @@
 const webpack = require('webpack');
-const path = require('path');
+const path    = require('path');
 
 const paths = {
     app: path.resolve(__dirname, 'src')
 };
 
 module.exports = {
-    entry: './src/app.jsx',
+    entry: './src/index.jsx',
     output: {
         publicPath: '/public/',
-        filename: './src/bundle.js'
+        filename: 'bundle.js'
     },
     devTool: 'eval-source-map',
     module: {
         loaders: [
             {
                 test: /\.jsx?/,
-                include: paths.app,
-                loader: 'babel?cacheDirectory'
+                loader: 'babel?cacheDirectory',
+                exclude: /(node_modules|public)/
             },
             {
-                test: /\.css/,
-                include: paths.app,
-                loader: 'style!css'
-            },
-            {
-                test: /\.less/,
-                include: paths.app,
+                test: /(\.css|\.less)/,
                 loader: 'style!css!less'
+            },
+            {
+                test: /\.woff2$|\.woff$|\.ttf$|\.eot$|\.svg$/,
+                loader: "file"
+            },
+            {
+                test: /\.jpe?g$|\.gif$|\.png$/,
+                loader: "file"
+            },
+            {
+                test: /\.json$/,
+                loader: "json-loader"
+
             }
         ]
     }
