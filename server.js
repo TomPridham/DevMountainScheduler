@@ -8,7 +8,7 @@ var app = express();
 // app.use(bodyParser.json())
 // app.use(cors(corsOptions))
 
-app.use(express.static(__dirname + '/src'))
+app.use(express.static(__dirname + '/public'));
 
 
 

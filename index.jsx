@@ -1,11 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Router, Route, hashHistory, IndexRoute} from 'react-router';
-import App from './components/App';
-import Container from './components/Container'
+import App from './src/components/App';
+import Container from './src/components/Container';
+import 'jquery';
 
-require('./resources/styles/styles.less');
-require( 'bootstrap/dist/css/bootstrap.css');
+require('./src/resources/styles/styles.less');
+require('bootstrap/dist/css/bootstrap.css');
 require('bootstrap/dist/js/bootstrap.min');
 
 
